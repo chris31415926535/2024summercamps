@@ -16,7 +16,18 @@ knitr::opts_chunk$set(
 
 This repository contains an unofficial list of the City of Ottawa's 2024 summer camps and, if you're so inclined, the R code for you to pull and process the data yourself. 
 
+Here's the rough process:
+
+* I pulled data for ALL camps/classes listed at [Register Ottawa](https://anc.ca.apm.activecommunities.com/ottawa/home?locale=en-US).
+  * Tech detail: I used Chrome dev tools to find the API call the web app used behind the scenes, and then just called it in a loop.
+* I filtered for events starting after July 1 and ending before September 1.
+* I processed the data and removed a bunch of (what seemed to me to be) non-informative columns.
+* I saved the results in a .csv file.
+
+You can do whatever you want with it, including just loading it in Excel and filtering by max/min ages, sorting by start date, filtering for keywords...
+
 **This data comes without any guarantees!** It was accurate as of about 1:30pm on Sunday, January 14, 2024.
 
 
-* [Here's a link to the data in .csv format.](output/2024_ottawa_summer_camps_2024-01-14.csv)
+* [Here's a link to the summer camps data in .csv format.](output/2024_ottawa_summer_camps_2024-01-14.csv)
+* [Here's a link to ALL City of Ottawa camps/classes, including e.g swimming lessons, also in .csv format.](output/2024_ottawa_events_all_2024-01-14.csv)

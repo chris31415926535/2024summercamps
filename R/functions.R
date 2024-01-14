@@ -48,11 +48,13 @@ scrape_all_pages <- function(){
     results_list[[i]] <- page_data
   }
   
+  save(results_list, file=paste0("output/results_raw_",Sys.Date(),".Rdata"))
+  
   results_df <- purrr::map_df(results_list, process_page)
   results_final <- results_df |>
     dplyr::mutate(location = location$label) |>
-    dplyr::select(-action_link, -fee, -urgent_message, -dplyr::starts_with("age_max"), 
-                  -dplyr::starts_with("age_min"), -item_type, -num_of_sub_activities, 
+    dplyr::select(-action_link, -fee, -urgent_message, -age_min_week, -age_min_month, 
+                  -age_min_week, -age_min_month, -item_type, -num_of_sub_activities, 
                   -sub_activity_ids, -show_new_flag, -only_one_day, -already_enrolled,
                   -dplyr::starts_with("search_from"), -show_wish_list, -parent_activity,
                   -dplyr::starts_with("allow"), -wish_list_id, -max_grade, -min_grade,
