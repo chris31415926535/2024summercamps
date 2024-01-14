@@ -26,7 +26,7 @@ Here's the rough process:
 
 You can do whatever you want with it, including just loading it in Excel and filtering by max/min ages, sorting by start date, filtering for keywords...
 
-**This data comes without any guarantees!** It was accurate as of about 1:30pm on Sunday, January 14, 2024.
+**This data comes without any guarantees!** It was accurate as of about 2:30pm on Sunday, January 14, 2024.
 
 
 * [Here's a link to the summer camps data in .csv format.](output/2024_ottawa_summer_camps_2024-01-14.csv)
