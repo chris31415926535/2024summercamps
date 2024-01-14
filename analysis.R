@@ -11,7 +11,8 @@ results_summeronly <- results |>
                 date_end = lubridate::ymd(date_range_end),
                 .before=1) |>
   dplyr::filter(date_start > lubridate::ymd("2024-07-01"),
-                date_end < lubridate::ymd("2024-09-01"))
+                date_end < lubridate::ymd("2024-09-01")) |>
+  dplyr::select(-date_start, -date_end)
 
 readr::write_csv(results, paste0("output/2024_ottawa_events_all_",Sys.Date(),".csv"))
 
